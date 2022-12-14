@@ -182,6 +182,9 @@ prompt_pure_preprompt_render() {
 
 	PROMPT="${(j..)ps1}"
 
+	# Append timestamp.
+	RPROMPT='%F{$prompt_pure_colors[timestamp]}%D{%m/%d} %D{%L:%M:%S}'
+
 	# Expand the prompt for future comparision.
 	local expanded_prompt
 	expanded_prompt="${(S%%)PROMPT}"
@@ -808,6 +811,7 @@ prompt_pure_setup() {
 	typeset -gA prompt_pure_colors_default prompt_pure_colors
 	prompt_pure_colors_default=(
 		execution_time       yellow
+		timestamp       		 green
 		git:arrow            cyan
 		git:stash            cyan
 		git:branch           242

@@ -183,7 +183,7 @@ prompt_pure_preprompt_render() {
 	PROMPT="${(j..)ps1}"
 
 	# Append timestamp.
-	RPROMPT='%F{$prompt_pure_colors[timestamp]}%D{%m/%d} %D{%L:%M:%S}'
+	RPROMPT='%F{$prompt_pure_colors[timestamp]}%D{%m/%d} %D{%T}'
 
 	# Expand the prompt for future comparision.
 	local expanded_prompt
